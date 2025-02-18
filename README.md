@@ -16,15 +16,18 @@ Before running the project, ensure you have:
 ## 🗄️ **Database Setup**  
 Before running the application, you need to **create the PostgreSQL database**.  
 
-✅ If you are using **Linux/macOS**, run:  
+### 🖥️ Linux/macOS  
+Run:  
 ```sh
 createdb -U postgres auction_db
 ```
-✅ If you are using **Windows (or manually running queries in `psql`)**, use:  
+
+### 🖥️ Windows  
+Run:  
 ```sh
-psql -U postgres
-CREATE DATABASE auction_db;
+psql -U postgres -c "CREATE DATABASE auction_db;"
 ```
+
 ⚠️ **Ensure PostgreSQL is running before starting the application.**
 
 ---
@@ -79,16 +82,42 @@ Using **Maven**, compile and start the Spring Boot application:
 mvn spring-boot:run
 ```
 
+
 #### **👤 Enter Database Credentials**
-When you run the application, **you will be prompted to enter your PostgreSQL credentials**:
+When running the app, you will be **prompted to enter your PostgreSQL credentials**:
+
 ```sh
 Enter database username: your_postgres_username
 Enter database password: your_postgres_password
 ```
-✅ These credentials will be used to connect to **auction_db**.
+
+These credentials are **only used at runtime** and are **not stored** anywhere in the code for security reasons.
+
 
 📌 **After starting**, open your browser or Postman to access the API.
 
+---
+
+## **📂 Project Structure**:
+
+```
+📂 auction-system/
+├── 📁 src/
+│   ├── 📁 main/
+│   │   ├── 📁 java/com/example/auction/
+│   │   │   ├── 📁 controller/  # REST controllers
+│   │   │   ├── 📁 model/        # Entity models
+│   │   │   ├── 📁 service/      # Business logic
+│   │   │   ├── 📁 dao/          # Database access (JPA repositories)
+│   │   │   ├── 📁 security/     # Spring Security configuration
+│   │   │   ├── AuctionApplication.java  # Main entry point
+│   │   ├── 📁 resources/
+│   │   │   ├── application.properties   # Spring Boot config
+│   ├── 📁 test/  # No unit tests included
+│
+├── 📄 pom.xml  # Maven dependencies
+├── 📄 README.md  # Project documentation
+```
 ---
 
 ## ✨ Features  
@@ -121,6 +150,7 @@ Feel free to **modify, enhance, and contribute**!
 ✅ **Improve UI using React.js or Angular** for auction listings  
 ✅ **Add JWT authentication instead of Basic Auth**  
 ✅ **Integrate email notifications for new auctions**  
+✅ **Add unit tests with JUnit & Mockito**  
 
 ---
 
