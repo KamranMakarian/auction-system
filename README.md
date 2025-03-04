@@ -3,7 +3,7 @@
 ## 🚀 Overview  
 The **Auction Management System** is a **Spring Boot-based RESTful API** that allows users to create, view, search, and manage auctions. The project demonstrates **Spring Boot, Spring Security, PostgreSQL integration, and role-based authentication**.  
 
-👉 **This is an exercise project** showcasing how to build a secure API that connects to a PostgreSQL database.  
+👉 **This is a demo project** showcasing how to build a secure API that connects to a PostgreSQL database.  
 
 ## 🔧 Prerequisites  
 Before running the project, ensure you have:  
